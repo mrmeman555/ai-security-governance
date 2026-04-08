@@ -37,7 +37,7 @@ Every framework you work with — SOC 2, HIPAA, HITRUST, ISO 27001, CMMC — req
 - "We run regular vulnerability scans" is no longer sufficient as a control narrative if the scans only check known CVEs
 - The gap between "we scan for known vulnerabilities" and "we discover unknown vulnerabilities" is now a documentable risk
 
-**The question clients will start asking:** "Should our vulnerability management program account for AI-augmented discovery?" The answer is going to be yes within 18 months. Firms that help clients prepare now are ahead.
+**The question that's coming:** "Should our vulnerability management program account for AI-augmented discovery?" Within 18 months, the answer is probably yes.
 
 ### 2. HITRUST Assessment Scope
 
@@ -46,7 +46,7 @@ HITRUST rolls HIPAA + SOC 2 + NIST into one unified assessment. If the vulnerabi
 - **Control 07.d (Technical Vulnerability Management)** — currently satisfied by regular scanning and patching. Post-Glasswing, assessors may need to ask whether the organization has evaluated AI-augmented discovery tools or documented a risk acceptance for not using them.
 - **Control 01.v (Information Access Restriction)** — zero-day exposure in foundational software (OS, browsers, media libraries) affects the risk calculus for access controls built on top of that software.
 
-This isn't a requirement today. But HITRUST updates its control framework regularly, and the next revision will almost certainly reference AI-augmented vulnerability management. Assessors who understand this shift before the framework catches up can advise clients proactively.
+This isn't a requirement today. But HITRUST updates its control framework regularly, and the next revision will likely reference AI-augmented vulnerability management.
 
 ### 3. HIPAA Risk Analysis
 
@@ -56,7 +56,7 @@ HIPAA's Security Rule (§164.308(a)(1)) requires covered entities to "conduct an
 
 **Healthcare-specific concern:** Healthcare organizations are the #1 target for ransomware. The software they depend on (OS kernels, browsers, media processing libraries like FFmpeg) is exactly where Mythos found its most critical vulnerabilities. A dental clinic running unpatched FFmpeg for imaging software now has a named, documented risk that didn't exist in any database last week.
 
-**For Steadfast's healthcare clients:** This is a conversation to have during the next risk assessment cycle. Not as a scare tactic — as a genuine update to the threat landscape that their risk analysis should reflect.
+This seems like the kind of thing that comes up in the next risk assessment cycle — not as a scare tactic, but as a genuine update to the threat landscape.
 
 ### 4. SOC 2 Trust Services Criteria
 
@@ -66,7 +66,7 @@ HIPAA's Security Rule (§164.308(a)(1)) requires covered entities to "conduct an
 
 **CC7.1 (Vulnerability Management)** — Language must expand from "remediation of known vulnerabilities" to include preemptive discovery using AI-native tools that operate at machine speed. The residual risk statement should acknowledge whether detection capabilities extend beyond known-CVE scanning. This becomes a finding if the risk isn't acknowledged.
 
-**Practical impact for SOC 2 engagements:** When writing control narratives for vulnerability management, the DE/OE assessment should note the scope of the organization's detection capabilities. Simply having a vulnerability scanner is no longer "reasonable" if the scanner only checks known CVEs and AI tools can find what it can't.
+**Worth noting for SOC 2 engagements:** Control narratives for vulnerability management may need to address whether detection capabilities extend beyond known-CVE scanning, now that AI tools can demonstrably find what scanners can't.
 
 ### 5. Legal Precedent — FTC "Reasonable Security"
 
@@ -82,20 +82,15 @@ New policy language is emerging requiring "AI-Native Defense" or evidence of AI-
 
 Current PCAOB and AICPA guidance emphasizes auditor independence and warns against auditors using AI tools that "audit their own work" or implementing the very controls they test. This creates a tension: assessors need to understand AI-augmented tools to evaluate client controls, but can't use the same tools to perform their own assessments without independence concerns.
 
-### 5. vCISO Advisory — The Client Conversation
+### 8. vCISO Advisory Angle
 
-For Steadfast's vCISO engagements, this is a proactive advisory opportunity:
+This feels like it opens up a few natural conversations with clients:
 
-**The 90-day conversation:**
-- "Here's what happened with Glasswing. Here's what it means for your vulnerability management program."
-- "Your current scans check known CVEs. This new class of AI tool finds things that aren't in any database. You don't need to adopt it today, but you need to document the risk and plan for it."
-- "Within 18 months, AI-augmented vulnerability discovery will be commercially available. Let's build your adoption roadmap now so you're not scrambling."
+- Most vulnerability management programs are scoped against known CVEs. Glasswing exposed a class of risk that doesn't live in any database yet.
+- Organizations don't need to adopt AI-augmented scanning today, but documenting the risk and having a position on it seems like it'll matter soon.
+- When Mythos-class tools become commercially available (12-18 months), clients who already have a policy position will be ahead of those scrambling to catch up.
 
-**The service line opportunity:**
-- AI-augmented assessment methodology development
-- Policy updates to account for AI-assisted vulnerability management
-- Client readiness assessments for when Mythos-class tools become available
-- Gap analysis: current vulnerability management vs. AI-augmented baseline
+Potential service areas this touches: AI-augmented assessment methodology, policy updates for AI-assisted vulnerability management, client readiness assessments, gap analysis against the emerging baseline.
 
 ---
 
@@ -103,7 +98,7 @@ For Steadfast's vCISO engagements, this is a proactive advisory opportunity:
 
 Worth noting: the event that made Glasswing publicly visible happened because of a supply chain failure at Anthropic itself. On March 31, a misconfigured npm package exposed the full source architecture of Claude Code — an AI agent harness used by hundreds of thousands of developers. A missing line in a config file. That's the kind of operational security gap that SOC 2 and ISO 27001 controls are supposed to prevent.
 
-The irony is instructive: the company building the most powerful vulnerability detection AI in history was itself vulnerable to a packaging misconfiguration. That's the story you tell clients when they ask "does this really matter for us?"
+The irony is hard to miss: the company building the most powerful vulnerability detection AI in history was itself vulnerable to a packaging misconfiguration.
 
 ---
 

@@ -98,7 +98,7 @@ ISO 42001 covers AI system lifecycle governance. NIST AI RMF covers risk managem
 
 In 2025-2026, attackers utilized Claude-based agents against Mexican government systems — highlighting a lack of harness-level guardrails preventing models from executing offensive security scripts even when the model itself has safety filters. The model had safeguards. The harness didn't. That's the gap.
 
-Every enterprise deploying AI agent systems will need governance over this layer. Most don't even know it exists yet. The firms that can articulate "here's what an agent harness is, here's where the controls go, here's how to audit it" will own the AI governance consulting market.
+Every enterprise deploying AI agent systems will need governance over this layer. Most don't even know it exists yet.
 
 ### Harness Risk & Control Matrix (SOC 2 Mapping)
 
@@ -106,7 +106,7 @@ For a detailed control-by-control mapping of harness governance areas to SOC 2 T
 
 ### The Cranium connection
 
-Cranium's AgentSensor product does exactly this — it provides visibility into the agentic layer by detecting AI agents, the tools they invoke, and other agents in their networks. This is harness-level governance as a product. The consulting opportunity sits right next to it: help clients understand what they're looking at and what controls they need.
+Cranium's AgentSensor product does exactly this — it provides visibility into the agentic layer by detecting AI agents, the tools they invoke, and other agents in their networks. It's harness-level governance as a product.
 
 ## The Bottom Line
 

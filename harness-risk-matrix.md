@@ -14,13 +14,13 @@
 
 ---
 
-## Implementation Notes for vCISO Advisory
+## Notes
 
-**The "Glasswing" standard:** Under CC7.1, simply having a vulnerability scanner is no longer "reasonable." Clients should evaluate whether their harness integrates AI-augmented fuzzer capabilities to scan the code the agent is allowed to touch. See [glasswing-brief.md](glasswing-brief.md) for the full assessment impact.
+**Glasswing context:** Post-Glasswing, CC7.1 may need to account for whether a harness integrates AI-augmented scanning for the code the agent touches. See [glasswing-brief.md](glasswing-brief.md) for the full assessment impact.
 
-**Inheritance vs. responsibility:** Clients "inherit" model safety from Anthropic or OpenAI, but they own 100% of the harness security. A SOC 2 auditor will look for the code-level logic that restricts the Claude Code or OpenClaw environment — permission gates, deny lists, tool scoping.
+**Inheritance vs. responsibility:** Organizations "inherit" model safety from Anthropic or OpenAI, but harness security is entirely on the deployer. A SOC 2 auditor would look for the code-level logic that restricts the agent environment — permission gates, deny lists, tool scoping.
 
-**Prompt injection as input validation:** Frame prompt injection at the harness level as a violation of CC7.1 (System Operations). The harness must treat LLM output as "untrusted user input" before passing it to a system shell or database. This is the same principle as SQL injection prevention — the execution layer must not trust the input layer.
+**Prompt injection as input validation:** Prompt injection at the harness level maps to CC7.1 (System Operations). The harness needs to treat LLM output as untrusted input before passing it to a system shell or database — same principle as SQL injection prevention.
 
 ---
 
