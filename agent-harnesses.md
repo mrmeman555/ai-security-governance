@@ -79,7 +79,30 @@ ISO 42001 covers AI system lifecycle governance. NIST AI RMF covers risk managem
 - Memory persists sensitive information between sessions (or is wiped)
 - Agents can modify their own behavior rules (or can't)
 
+### Where the frameworks are silent — specifically
+
+**ISO 42001:**
+- **Section 8.2 (AI System Impact Assessment)** — focuses on broad societal and privacy impacts but lacks requirements for tool-call side effects or delegated subagent risk
+- **Annex A.5 (Data & Information)** — addresses data lifecycle but is silent on memory persistence (long-term agent state) which can bypass standard session-clearing protocols
+- **Annex A.7 (AI System Life Cycle)** — focuses on model development; does not mandate permission gates for autonomous execution of API calls by agents
+
+**NIST AI RMF:**
+- **GOVERN 2.1** — requires clear roles and responsibilities but lacks a definition for the accountability of autonomous subagents that act on behalf of a primary agent
+- **MEASURE 2.6 (Security & Resilience)** — mentions robustness but provides no specific guidance on audit logging for tool use (e.g., recording every JSON payload sent to an external API by the agent)
+
+**AICPA:** As of early 2026, the AICPA has not issued formal updates to the Trust Services Criteria specifically for agentic AI, leaving auditors to map these risks to the broad "Security" (CC series) and "Processing Integrity" criteria.
+
+**HITRUST AI Security Assessment:** Introduced in late 2024 with 51 AI-specific controls. While prescriptive, it relies on "Inheritance" from providers (like OpenAI/Google) rather than explicit harness-level requirements for custom-built orchestrators.
+
+### Real-world governance failure
+
+In 2025-2026, attackers utilized Claude-based agents against Mexican government systems — highlighting a lack of harness-level guardrails preventing models from executing offensive security scripts even when the model itself has safety filters. The model had safeguards. The harness didn't. That's the gap.
+
 Every enterprise deploying AI agent systems will need governance over this layer. Most don't even know it exists yet. The firms that can articulate "here's what an agent harness is, here's where the controls go, here's how to audit it" will own the AI governance consulting market.
+
+### Harness Risk & Control Matrix (SOC 2 Mapping)
+
+For a detailed control-by-control mapping of harness governance areas to SOC 2 Trust Services Criteria, see [harness-risk-matrix.md](harness-risk-matrix.md).
 
 ### The Cranium connection
 

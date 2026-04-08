@@ -60,11 +60,27 @@ HIPAA's Security Rule (§164.308(a)(1)) requires covered entities to "conduct an
 
 ### 4. SOC 2 Trust Services Criteria
 
-**CC7.1 (Detection of Changes)** — Monitoring and detection controls need to account for the fact that foundational software may contain undiscovered vulnerabilities that traditional tools cannot find. This doesn't invalidate existing controls, but it does mean the residual risk statement should acknowledge the limitation.
+**CC3.2 (Risk Assessment)** — Must now account for accelerated exploitation windows. If an AI can find a 27-year-old bug in hours, traditional "low" risk ratings for legacy code are no longer defensible. Risk assessments should consider: "What is our exposure to zero-day vulnerabilities in foundational software, and what is our detection capability for vulnerabilities that don't appear in known databases?"
 
-**CC3.2 (Risk Assessment)** — Risk assessments should now consider: "What is our exposure to zero-day vulnerabilities in foundational software, and what is our detection capability for vulnerabilities that don't appear in known databases?"
+**CC4.1 (Monitoring)** — Language needs to shift from "periodic" to near-continuous automated scanning. Manual quarterly pentests may no longer meet the "effective" threshold given the scale of AI-driven discovery.
 
-**Practical impact for SOC 2 engagements:** When writing control narratives for vulnerability management, the DE/OE assessment should note whether the organization's detection capabilities extend beyond known-CVE scanning. This becomes a finding if the risk isn't acknowledged.
+**CC7.1 (Vulnerability Management)** — Language must expand from "remediation of known vulnerabilities" to include preemptive discovery using AI-native tools that operate at machine speed. The residual risk statement should acknowledge whether detection capabilities extend beyond known-CVE scanning. This becomes a finding if the risk isn't acknowledged.
+
+**Practical impact for SOC 2 engagements:** When writing control narratives for vulnerability management, the DE/OE assessment should note the scope of the organization's detection capabilities. Simply having a vulnerability scanner is no longer "reasonable" if the scanner only checks known CVEs and AI tools can find what it can't.
+
+### 5. Legal Precedent — FTC "Reasonable Security"
+
+The FTC has historically benchmarked "reasonableness" against available technology. In *FTC v. Wyndham Worldwide*, the court upheld the FTC's authority to enforce data security standards based on what was commercially available and what the company should have known.
+
+**The Glasswing implication:** Project Glasswing establishes that AI-driven vulnerability scanning is now commercially "available" to defenders — at least to the ~50 partner organizations. As this capability broadens, its non-use becomes a potential indicator of negligence in future enforcement. The precedent is clear: "we didn't know" stops being a defense when the capability is publicly documented and accessible.
+
+### 6. Cyber Liability Insurance
+
+New policy language is emerging requiring "AI-Native Defense" or evidence of AI-augmented code scanning as a condition for coverage of zero-day exploits. The logic: "human-only" review is now demonstrably insufficient for thousands of vulnerabilities that AI can find. Carriers are beginning to price this into their risk models.
+
+### 7. PCAOB / AICPA on AI in Audit
+
+Current PCAOB and AICPA guidance emphasizes auditor independence and warns against auditors using AI tools that "audit their own work" or implementing the very controls they test. This creates a tension: assessors need to understand AI-augmented tools to evaluate client controls, but can't use the same tools to perform their own assessments without independence concerns.
 
 ### 5. vCISO Advisory — The Client Conversation
 
