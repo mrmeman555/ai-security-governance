@@ -26,6 +26,7 @@ Anthropic launched Project Glasswing on April 7, 2026 with AWS, Apple, Google, M
 | Claurst — clean-room Rust rewrite | [github.com/Kuberwastaken/claurst](https://github.com/Kuberwastaken/claurst) |
 | OpenClaw — first popular open-source harness | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
 | Cranium AI — harness-level governance platform | [cranium.ai](https://cranium.ai/) |
+| Claude Managed Agents — Anthropic's harness-as-a-service (beta) | [platform.claude.com](https://platform.claude.com/docs/en/managed-agents/overview) |
 | Innovaiden — Glasswing assessment baseline analysis | [innovaiden.com](https://www.innovaiden.com/insights/project-glasswing-cybersecurity-assessment-baseline) |
 
 ---

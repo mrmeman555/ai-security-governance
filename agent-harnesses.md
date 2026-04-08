@@ -67,6 +67,25 @@ A clean-room rewrite of the Claude Code agent harness architecture, built from s
 
 This is significant because it proves the harness architecture is reproducible. The model is interchangeable. The harness is the product.
 
+### Claude Managed Agents (Anthropic — managed harness-as-a-service, beta April 2026)
+
+Anthropic's latest move makes the thesis explicit: they're now selling the harness itself as a managed service. [Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview) gives enterprises a pre-built, configurable agent harness running in Anthropic's cloud infrastructure — containerized execution, built-in tools (bash, file ops, web search, MCP servers), persistent sessions, and network access controls.
+
+The four core concepts map directly to the architecture table above:
+
+| Managed Agents concept | Harness component |
+|----------------------|-------------------|
+| **Agent** (model + system prompt + tools + MCP servers) | Tool system + Permission layer |
+| **Environment** (container with packages, network rules) | Orchestration + Sandboxing |
+| **Session** (running instance, generates outputs) | Context management + Memory |
+| **Events** (messages, tool results, status updates) | Audit / logging |
+
+Multi-agent orchestration and persistent memory are in research preview. This is the direction enterprise AI deployment is heading — and the governance questions are the same whether you build your own harness or use a managed one. Who controls the tools? What gets logged? What persists between sessions? Who's accountable when a subagent acts?
+
+**Docs:** https://platform.claude.com/docs/en/managed-agents/overview
+
+---
+
 ## Why This Matters for GRC
 
 ### The governance gap
