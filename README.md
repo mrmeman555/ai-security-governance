@@ -27,6 +27,14 @@ On April 8, 2026, the Pentagon's FY2027 budget proposed $1.5T in defense spendin
 
 *Note: The Glasswing disclosure and the FISA 702 renewal push are editorially adjacent — they occurred in the same news cycle, but no single article explicitly cites Glasswing as justification for renewal.* [FISA-702]
 
+### Cyber Verification Program
+
+Anthropic plans to bring Mythos-class capabilities to a future Opus model with new safeguards that will restrict security-related outputs. The system card references an upcoming exception mechanism for security professionals:
+
+> "Security professionals whose legitimate work is affected by these safeguards will be able to apply to an upcoming Cyber Verification Program." [GLASSWING-CARD]
+
+No details have been published — eligibility criteria, application process, access scope, and timeline are not specified in the system card or announcement. The program is not yet operational. [GLASSWING] [GLASSWING-CARD]
+
 ### Primary sources
 
 | Resource | Link |
