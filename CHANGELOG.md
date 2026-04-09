@@ -4,6 +4,21 @@ All notable updates to this repository.
 
 ---
 
+## 2026-04-09 — Reground everything in verbatim sources
+
+- Created `system-card-summary.md` — single document consolidating all 8 system card workpapers into verbatim quotes with `[GLASSWING-CARD]` citations
+- Deleted 8 individual workpapers (`system-card/evaluation-methodology.md`, `zero-day-discovery.md`, `exploit-development.md`, `logic-and-crypto-vulns.md`, `reverse-engineering.md`, `alignment-assessment.md`, `defender-recommendations.md`, `strategic-context.md`) and `system-card/README.md`
+- Deleted `templates/system-card-workpaper.md`
+- Rewrote `analysis/agent-harness-architecture.md` — quote-driven: Claude Code leak source, convergence table with sourced star counts, Managed Agents concept table from Anthropic docs
+- Rewrote `analysis/harness-governance-gap.md` — removed Mexico AI incident (unverified), removed "Bottom Line" editorial section, kept system card circumvention evidence as verbatim quotes
+- Rewrote `analysis/reasonable-security-baseline.md` — quoted FTC v Wyndham holding, verbatim system card cost data, cited CISA budget numbers from MeriTalk/Cybersecurity Dive; removed unsourced cyber insurance and PCAOB/AICPA paragraphs, removed editorial predictions
+- Updated `events/2026-04--project-glasswing.md` links to point to `system-card-summary.md`
+- Updated README: replaced 8-link workpapers section with single link to `system-card-summary.md`
+- Updated SOURCES.md: replaced workpaper paths in cited-in lines; marked MEXICO-AI-INCIDENT as removed
+- Rationale: every claim should trace to a verbatim quote from a primary source — no editorial interpretation mixed with sourced facts
+
+---
+
 ## 2026-04-09 — Simplify repo to index + analysis
 
 - Deleted `controls/repo-governance.md` (aspirational controls the repo didn't enforce)

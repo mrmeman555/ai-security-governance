@@ -18,17 +18,10 @@ Individual briefs on key developments.
 - [Managed Agents Beta](events/2026-04--managed-agents-beta.md) — Anthropic sells the harness as a service
 - [Project Glasswing](events/2026-04--project-glasswing.md) — Mythos finds thousands of zero-days
 
-### System Card Workpapers
-Technical workpapers analyzing the [Mythos Preview System Card](https://red.anthropic.com/2026/mythos-preview/) (244 pages). Each workpaper is self-contained.
+### System Card Summary
+Verbatim findings from the [Mythos Preview System Card](https://red.anthropic.com/2026/mythos-preview/) (244 pages) — organized by topic with direct quotes and cited numbers.
 
-- [Evaluation Methodology](system-card/evaluation-methodology.md) — scaffold, severity tiers, cost data
-- [Zero-Day Discovery](system-card/zero-day-discovery.md) — OpenBSD, FFmpeg, VMM, aggregate stats
-- [Exploit Development](system-card/exploit-development.md) — N-day case studies, kernel chaining, browser exploitation
-- [Logic & Crypto Vulnerabilities](system-card/logic-and-crypto-vulns.md) — auth bypasses, TLS/AES-GCM/SSH weaknesses
-- [Reverse Engineering](system-card/reverse-engineering.md) — closed-source analysis capabilities
-- [Alignment Assessment](system-card/alignment-assessment.md) — sandbox escape, credential fishing, grader hacking, SAE interpretability
-- [Defender Recommendations](system-card/defender-recommendations.md) — Anthropic's guidance for organizations
-- [Strategic Context](system-card/strategic-context.md) — threat landscape transition, historical parallels
+- [System Card Summary](system-card-summary.md) — evaluation methodology, zero-day discovery, exploit development, logic & crypto, reverse engineering, alignment assessment, defender recommendations, strategic context
 
 ### Analysis
 Deeper pieces connecting events to governance implications.
@@ -70,9 +63,8 @@ In 10 weeks, the agent harness — the orchestration layer that gives AI models 
 ## How this repo works
 
 - **Events** are templated briefs — one per development, with standardized fields for date, source, and impact. See [templates/event-brief.md](templates/event-brief.md).
-- **Analysis** pieces synthesize across events to surface governance implications.
-- **System card workpapers** (`system-card/`) are self-contained technical analyses — one per major section of the Mythos system card, each standalone.
-- **Controls** document how this repo governs its own content.
+- **Analysis** pieces connect events to governance implications, grounded in verbatim quotes from primary sources.
+- **System card summary** consolidates findings from the 244-page Mythos Preview system card into a single document organized by topic, with direct quotes and cited numbers.
 
 New events get added as they happen. The CHANGELOG tracks what changed and when.
 

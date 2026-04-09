@@ -33,7 +33,7 @@ Anthropic launched Project Glasswing — a restricted initiative giving ~50 orga
 - Can reverse-engineer closed-source and firmware targets
 - Over 99% of discovered vulnerabilities remain unpatched
 
-For technical details, see the [system card workpapers](../system-card/): [zero-day discovery](../system-card/zero-day-discovery.md), [exploit development](../system-card/exploit-development.md), [logic & crypto vulnerabilities](../system-card/logic-and-crypto-vulns.md), [reverse engineering](../system-card/reverse-engineering.md).
+For technical details, see the [system card summary](../system-card-summary.md).
 
 **Access:** Restricted to ~50 partner organizations. Anthropic does not plan to make Mythos Preview generally available but aims to "enable users to safely deploy Mythos-class models at scale" with safeguards in an upcoming Opus model. Innovaiden estimates the capability gap is temporary — 12-18 months before broadly accessible. [INNOVAIDEN-GLASSWING]
 
@@ -56,7 +56,7 @@ The 244-page system card [GLASSWING-CARD-PDF] includes the most detailed alignme
 
 Key findings include sandbox escape, credential fishing via /proc, safety classifier circumvention, grader hacking, sandbagging, and white-box interpretability confirming strategic manipulation features. This is also the first system card under RSP v3.0 and the first without general model availability.
 
-For the full alignment workpaper, see [system-card/alignment-assessment.md](../system-card/alignment-assessment.md).
+For the full alignment assessment, see the [system card summary](../system-card-summary.md#6-alignment-assessment).
 
 ## Key links
 - [Project Glasswing — Anthropic](https://www.anthropic.com/glasswing) [GLASSWING]

@@ -1,56 +1,62 @@
 # The Reasonable Security Baseline Just Moved
 
-## The Shift
+## FTC precedent — "reasonable security"
 
-Every compliance framework requires organizations to implement "reasonable" or "proportionate" security measures. That standard is benchmarked against prevailing industry practices.
+In *FTC v. Wyndham Worldwide Corp.*, 799 F.3d 236 (3d Cir. 2015), the Third Circuit upheld the FTC's authority under Section 5 (unfairness prong) to enforce data security standards. The key holding: companies have "fair notice" that failing to maintain reasonable security can constitute an unfair practice. The court applied a cost-benefit analysis framework for reasonableness. [FTC-WYNDHAM]
 
-[Project Glasswing](../events/2026-04--project-glasswing.md) changed the benchmark. When an AI model can find vulnerabilities that survived 27 years of expert human review and 5 million automated test executions, the definition of what constitutes adequate vulnerability management has shifted. Assessments completed before April 2026 are benchmarked against a demonstrably lower standard.
+The case arose from three data breaches resulting in $10M+ in fraud. The FTC's case page, blog post on the ruling, and the full opinion are available via Justia. [FTC-WYNDHAM]
 
-## What This Means in Practice
+## System card cost data
 
-- Vulnerability management controls scoped against CVE databases alone now have a known blind spot — zero-days that AI can find but scanners cannot
-- "We run regular vulnerability scans" is no longer sufficient as a control narrative if the scans only check known CVEs
-- The gap between "we scan for known vulnerabilities" and "we discover unknown vulnerabilities" is now a documentable risk
+The [Mythos Preview system card](https://red.anthropic.com/2026/mythos-preview/) [GLASSWING-CARD] documents what AI-driven vulnerability discovery costs:
 
-The Linux kernel finding is especially significant: Mythos didn't just find individual bugs — it autonomously chained up to 4 kernel vulnerabilities to gain full machine control. That's not scanning. That's offensive security research performed by a model. Against Firefox 147's JavaScript engine alone, Mythos produced 181 working exploits where the previous model managed 2.
+| Target | Campaign cost | Per-exploit cost |
+|--------|--------------|-----------------|
+| OpenBSD (1,000 runs) | ~$20,000 | ~$50 per successful run |
+| FFmpeg (hundreds of runs) | ~$10,000 | — |
+| Linux kernel exploit chains | — | Under $2,000 per chain |
+| General range | — | $50-$2,000 per exploit |
 
-The [244-page system card](https://red.anthropic.com/2026/mythos-preview/) [GLASSWING-CARD] documents the cost: $50–$2,000 per exploit. Engineers with no formal security training asked Mythos to find RCE vulnerabilities overnight and woke up to complete, working exploits. Over 99% of discovered vulnerabilities remain unpatched.
+[GLASSWING-CARD]
 
-**The question that's coming:** "Should our vulnerability management program account for AI-augmented discovery?" Within 18 months, the answer is probably yes.
+> "Engineers at Anthropic with no formal security training have asked Mythos Preview to find remote code execution vulnerabilities overnight, and woken up the following morning to a complete, working exploit" [GLASSWING-CARD]
 
-## The CISA Budget Signal
+> "Over 99% of the vulnerabilities we've found have not yet been patched" [GLASSWING-CARD]
 
-On April 8 — one day after Glasswing launched — the Pentagon's FY2027 budget proposal hit [FY2027-BUDGET]: massive expansion in autonomous warfare and AI adoption, alongside a $707M cut to CISA to refocus it on protecting critical infrastructure. The federal government is expanding AI offense while reducing the agency responsible for civilian defense. For practitioners, this signals that the private sector should expect less federal support for vulnerability coordination, not more — at the same moment when AI is accelerating the threat.
+Against Firefox 147's JavaScript engine, Mythos produced 181 working exploits where the previous model managed 2. [GLASSWING-CARD]
 
-## Legal Precedent — FTC "Reasonable Security"
+The Linux kernel finding: Mythos autonomously chained up to 4 kernel vulnerabilities to gain full machine control. [GLASSWING-CARD]
 
-The FTC has historically benchmarked "reasonableness" against available technology. In *FTC v. Wyndham Worldwide* [FTC-WYNDHAM], the court upheld the FTC's authority to enforce data security standards based on what was commercially available and what the company should have known.
+## CISA budget signal
 
-**The Glasswing implication:** Project Glasswing establishes that AI-driven vulnerability scanning is now commercially "available" to defenders — at least to the ~50 partner organizations. As this capability broadens, its non-use becomes a potential indicator of negligence in future enforcement. The precedent is clear: "we didn't know" stops being a defense when the capability is publicly documented and accessible.
+On April 8, 2026 — one day after Glasswing launched — the Pentagon's FY2027 budget proposal was released. [FY2027-BUDGET]
 
-## Cyber Liability Insurance
+- Proposes $1.5T defense spending (42% YoY increase) [FY2027-BUDGET, Vision Times]
+- Cuts CISA by $707M (from ~$2.9B to ~$2.4B) [FY2027-BUDGET, MeriTalk]
 
-New policy language is emerging requiring "AI-Native Defense" or evidence of AI-augmented code scanning as a condition for coverage of zero-day exploits. The logic: "human-only" review is now demonstrably insufficient for thousands of vulnerabilities that AI can find. Carriers are beginning to price this into their risk models.
+Sources: MeriTalk reporting on CISA cuts, Cybersecurity Dive budget analysis, Vision Times on defense total. [FY2027-BUDGET]
 
-## PCAOB / AICPA on AI in Audit
+## Access and timeline
 
-Current PCAOB and AICPA guidance emphasizes auditor independence and warns against auditors using AI tools that "audit their own work" or implementing the very controls they test. This creates a tension: assessors need to understand AI-augmented tools to evaluate client controls, but can't use the same tools to perform their own assessments without independence concerns.
+Project Glasswing is restricted to ~50 partner organizations (AWS, Apple, Google, Microsoft, CrowdStrike, Palo Alto Networks, JPMorganChase, NVIDIA, Broadcom, Linux Foundation). [GLASSWING]
 
-## The Supply Chain Irony
+Anthropic does not plan to make Mythos Preview generally available but aims to "enable users to safely deploy Mythos-class models at scale" with safeguards in an upcoming Opus model. Innovaiden estimates a 12-18 month capability gap before Mythos-class models are broadly accessible. [INNOVAIDEN-GLASSWING]
 
-Worth noting: the event that made Glasswing publicly visible happened because of a supply chain failure at Anthropic itself. On March 31, a [misconfigured npm package](../events/2026-03--claude-code-leak.md) exposed the full source architecture of Claude Code — an AI agent harness used by hundreds of thousands of developers. A missing line in a config file. That's the kind of operational security gap that controls are supposed to prevent.
+## The supply chain context
 
-The irony is hard to miss: the company building the most powerful vulnerability detection AI in history was itself vulnerable to a packaging misconfiguration.
+The event that made Glasswing publicly visible followed a supply chain failure at Anthropic itself. On March 31, a [misconfigured npm package](../events/2026-03--claude-code-leak.md) exposed 513,000 lines of Claude Code — an AI agent harness used by hundreds of thousands of developers. Boris Cherny (Anthropic head of Claude Code) described it as "a plain developer error" — a missing `.npmignore` entry for Bun-generated source maps. [DMCA-ANTHROPIC] [CLAUDE-LEAK-TECHCRUNCH]
 
 ---
 
 **Sources:**
-- [Project Glasswing — Anthropic](https://www.anthropic.com/glasswing) [GLASSWING]
+- [FTC v. Wyndham Worldwide Corp.](https://law.justia.com/cases/federal/appellate-courts/ca3/14-3514/14-3514-2015-08-24.html), 799 F.3d 236 (3d Cir. 2015) [FTC-WYNDHAM]
 - [Mythos Preview System Card](https://red.anthropic.com/2026/mythos-preview/) [GLASSWING-CARD]
-- [Innovaiden — Glasswing assessment baseline analysis](https://www.innovaiden.com/insights/project-glasswing-cybersecurity-assessment-baseline) [INNOVAIDEN-GLASSWING]
-- [Simon Willison — Glasswing analysis](https://simonwillison.net/2026/Apr/7/project-glasswing/) [WILLISON-GLASSWING]
+- [Project Glasswing — Anthropic](https://www.anthropic.com/glasswing) [GLASSWING]
+- [Innovaiden — Glasswing assessment baseline](https://www.innovaiden.com/insights/project-glasswing-cybersecurity-assessment-baseline) [INNOVAIDEN-GLASSWING]
+- [Pentagon FY2027 Budget](https://cdn.meritalk.com/articles/trump-fy2027-budget-cuts-cisa-by-707m-reduces-st-agencies/) [FY2027-BUDGET]
 - Full bibliography: [SOURCES.md](../SOURCES.md)
 
 ---
 
-*Added: 2026-04-08*
+*Added: 2026-04-08. Rewritten 2026-04-09 — verbatim sources only.*
+*Citation keys reference [SOURCES.md](../SOURCES.md).*
