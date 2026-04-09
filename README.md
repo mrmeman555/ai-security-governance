@@ -1,19 +1,39 @@
-# AI Security & Governance — Research Tracker
+# AI Governance Watch
 
-Ongoing research into agent harnesses, AI governance gaps, and events reshaping cybersecurity assessment practices. Tracking Project Glasswing, the agent harness ecosystem, and what it all means for GRC frameworks.
+Ongoing research tracking how AI agent developments affect cybersecurity governance frameworks. Focused on the agent harness ecosystem, Project Glasswing, and what both mean for SOC 2, HITRUST, HIPAA, ISO 42001, and NIST AI RMF.
 
 ---
 
 ## Contents
 
-### [Agent Harnesses — What Makes AI Models Intelligent](agent-harnesses.md)
-What an agent harness is, why it matters more than the model itself, and how three real harnesses (Claude Code, OpenClaw, Claw Code) reveal a converging architecture that governance frameworks haven't caught up to yet.
+### Events
+Individual briefs on key developments, each with framework impact analysis.
 
-### [Agent Harness Risk & Control Matrix (SOC 2 Mapping)](harness-risk-matrix.md)
-A control-by-control mapping of harness governance areas — tool execution auth, payload logging, memory persistence, subagent delegation, rate/cost guardrails — to SOC 2 Trust Services Criteria.
+- [OpenClaw Goes Viral](events/2026-01--openclaw-viral.md) — first open-source harness, fastest-growing GitHub repo ever
+- [Anthropic v. OpenCode](events/2026-03--anthropic-v-opencode.md) — Anthropic sues to protect the harness
+- [Claude Code Source Leak](events/2026-03--claude-code-leak.md) — 513K lines exposed via npm misconfiguration
+- [Claw Code Rewrite](events/2026-03--claw-code-rewrite.md) — clean-room rebuild, 50K stars in 2 hours
+- [Managed Agents Beta](events/2026-04--managed-agents-beta.md) — Anthropic sells the harness as a service
+- [Project Glasswing](events/2026-04--project-glasswing.md) — Mythos finds thousands of zero-days
 
-### [Project Glasswing — What It Means for GRC](glasswing-brief.md)
-Anthropic launched Project Glasswing on April 7, 2026 with AWS, Apple, Google, Microsoft, CrowdStrike, and others. Their Mythos model found thousands of zero-day vulnerabilities — including bugs that survived 27 years of human review. This brief covers what that means for SOC 2, HITRUST, HIPAA, and vCISO advisory practices.
+### Analysis
+Deeper pieces connecting events to governance implications.
+
+- [Agent Harness Architecture](analysis/agent-harness-architecture.md) — what a harness is, the converging pattern
+- [The Harness Governance Gap](analysis/harness-governance-gap.md) — where ISO 42001, NIST AI RMF, and SOC 2 fall short
+- [The Reasonable Security Baseline Just Moved](analysis/reasonable-security-baseline.md) — FTC precedent, insurance, the shifting standard
+
+### Frameworks
+Living documents that accumulate findings per compliance framework.
+
+- [SOC 2](frameworks/soc2.md) — CC3.2, CC4.1, CC6.1, CC7.1 findings
+- [HITRUST](frameworks/hitrust.md) — 07.d, 01.v, AI Security Assessment
+- [HIPAA](frameworks/hipaa.md) — §164.308(a)(1), BAA for managed harnesses
+- [ISO 42001](frameworks/iso42001.md) — 8.2, A.5, A.7 gaps
+- [NIST AI RMF](frameworks/nist-ai-rmf.md) — GOVERN 2.1, MEASURE 2.6, MAP 3.1
+
+### Controls
+- [Harness Risk & Control Matrix (SOC 2 Mapping)](controls/harness-risk-matrix.md)
 
 ---
 
@@ -35,11 +55,22 @@ In 10 weeks, the agent harness — the orchestration layer that gives AI models 
 
 **Hours later — Someone rebuilds it from scratch.** Claw Code, a clean-room rewrite in Rust and Python, hit 50K stars in 2 hours. No proprietary code, independently audited. Three independent implementations, three different codebases, one architecture. The harness pattern is reproducible. It's not anyone's IP. It's an emerging standard.
 
-**April 1 — Anthropic stops fighting and starts selling.** Claude Managed Agents enters beta — the harness as a managed service. Containerized execution, built-in tools, persistent sessions, network access controls. Anthropic isn't fighting the pattern. They're monetizing it. The harness is now a product category. [Docs](https://platform.claude.com/docs/en/managed-agents/overview)
+**April 1 — Anthropic stops fighting and starts selling.** Claude Managed Agents enters beta — the harness as a managed service. Containerized execution, built-in tools, persistent sessions, network access controls. Anthropic isn't fighting the pattern. They're monetizing it. The harness is now a product category.
 
-**April 7 — The model inside the harness finds what humans couldn't.** Project Glasswing launches. Anthropic deploys Claude Mythos to ~50 partner organizations (AWS, Apple, Google, Microsoft, CrowdStrike, Palo Alto Networks) with $100M in usage credits. Mythos finds thousands of high-severity zero-days — including a 27-year-old bug in OpenBSD and a 16-year-old flaw in FFmpeg that automated tools ran 5 million times without catching. [Announcement](https://www.anthropic.com/glasswing)
+**April 7 — The model inside the harness finds what humans couldn't.** Project Glasswing launches. Anthropic deploys Claude Mythos to ~50 partner organizations (AWS, Apple, Google, Microsoft, CrowdStrike, Palo Alto Networks) with $100M in usage credits. Mythos finds thousands of high-severity zero-days — including a 27-year-old bug in OpenBSD and a 16-year-old flaw in FFmpeg that automated tools ran 5 million times without catching.
 
 **Two gaps converge.** The harness is now a visible, understood, reproducible, purchasable thing — and the governance frameworks (ISO 42001, NIST AI RMF, SOC 2 TSC) don't address it. At the same time, the model inside the harness just proved that the "reasonable security" baseline has shifted — and the frameworks haven't caught up to that either. Both gaps land on the same desk.
+
+---
+
+## How this repo works
+
+- **Events** are templated briefs — one per development, with standardized fields for date, source, impact, and framework mapping. See [templates/event-brief.md](templates/event-brief.md).
+- **Analysis** pieces synthesize across events to surface governance implications.
+- **Framework** docs are living trackers — findings accumulate as new events occur. See [templates/framework-update.md](templates/framework-update.md).
+- **Controls** are mappings of harness-level risks to specific framework criteria.
+
+New events get added as they happen. Framework docs get updated when an event affects a specific control or section. The CHANGELOG tracks what changed and when.
 
 ---
 
@@ -49,17 +80,15 @@ In 10 weeks, the agent harness — the orchestration layer that gives AI models 
 |----------|------|
 | Project Glasswing (Anthropic) | [anthropic.com/glasswing](https://www.anthropic.com/glasswing) |
 | Claude Code leaked source (DMCA in progress) | [github.com/codeaashu/claude-code](https://github.com/codeaashu/claude-code) |
-| Claurst — clean-room Rust rewrite | [github.com/Kuberwastaken/claurst](https://github.com/Kuberwastaken/claurst) |
 | OpenClaw — first popular open-source harness | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
 | Claw Code — clean-room Rust/Python rewrite | [github.com/ultraworkers/claw-code](https://github.com/ultraworkers/claw-code) |
 | Cranium AI — harness-level governance platform | [cranium.ai](https://cranium.ai/) |
-| Claude Managed Agents — Anthropic's harness-as-a-service (beta) | [platform.claude.com](https://platform.claude.com/docs/en/managed-agents/overview) |
-| Innovaiden — Glasswing assessment baseline analysis | [innovaiden.com](https://www.innovaiden.com/insights/project-glasswing-cybersecurity-assessment-baseline) |
+| Claude Managed Agents (beta) | [platform.claude.com](https://platform.claude.com/docs/en/managed-agents/overview) |
+| Innovaiden — Glasswing assessment baseline | [innovaiden.com](https://www.innovaiden.com/insights/project-glasswing-cybersecurity-assessment-baseline) |
+| Claurst — clean-room Rust rewrite | [github.com/Kuberwastaken/claurst](https://github.com/Kuberwastaken/claurst) |
 
 ---
 
 *April 2026 — Aaron Reveley*
-
----
 
 > *Research and analysis by Aaron Reveley. Writing assisted by Claude (Anthropic).*

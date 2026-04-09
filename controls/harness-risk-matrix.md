@@ -16,7 +16,7 @@
 
 ## Notes
 
-**Glasswing context:** Post-Glasswing, CC7.1 may need to account for whether a harness integrates AI-augmented scanning for the code the agent touches. See [glasswing-brief.md](glasswing-brief.md) for the full assessment impact.
+**Glasswing context:** Post-Glasswing, CC7.1 may need to account for whether a harness integrates AI-augmented scanning for the code the agent touches. See [Project Glasswing](../events/2026-04--project-glasswing.md) and [reasonable-security-baseline.md](../analysis/reasonable-security-baseline.md) for the full assessment impact.
 
 **Inheritance vs. responsibility:** Organizations "inherit" model safety from Anthropic or OpenAI, but harness security is entirely on the deployer. A SOC 2 auditor would look for the code-level logic that restricts the agent environment — permission gates, deny lists, tool scoping.
 
