@@ -1,7 +1,6 @@
-# What Project Glasswing Means for Your Assessment Practice
+# What Project Glasswing Means for GRC
 
-> **For:** Justin Graham, Steadfast Partners
-> **From:** Aaron Reveley
+> **Author:** Aaron Reveley
 > **Date:** April 8, 2026
 > **Format:** Practitioner brief — not a news summary. Focused on what changes for SOC 2, HITRUST, HIPAA, and vCISO advisory.
 

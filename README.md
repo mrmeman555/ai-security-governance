@@ -1,6 +1,6 @@
-# AI Security & Governance — Reference Notes
+# AI Security & Governance — Research Tracker
 
-A collection of reference material on agent harnesses, AI governance gaps, and recent events reshaping cybersecurity assessment practices.
+Ongoing research into agent harnesses, AI governance gaps, and events reshaping cybersecurity assessment practices. Tracking Project Glasswing, the agent harness ecosystem, and what it all means for GRC frameworks.
 
 ---
 
