@@ -63,6 +63,7 @@ Then Claude Code's source leaked, and suddenly people could compare the propriet
 
 A clean-room rewrite of the Claude Code agent harness architecture, built from scratch in Python and Rust after the leak. Not a copy — a reimplementation from the architectural specification.
 
+**Repo:** https://github.com/ultraworkers/claw-code
 **Site:** https://claw-code.codes/
 
 This is significant because it proves the harness architecture is reproducible. The model is interchangeable. The harness is the product.
