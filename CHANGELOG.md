@@ -4,6 +4,26 @@ All notable updates to this repository.
 
 ---
 
+## 2026-04-08 — System card workpapers
+
+- Created `system-card/` directory with 8 self-contained workpapers analyzing the Mythos Preview system card
+- WP-01: Evaluation Methodology — scaffold, 5-tier severity ladder, ~7K entry points, cost data, responsible disclosure
+- WP-02: Zero-Day Discovery — OpenBSD, FFmpeg, memory-safe VMM, aggregate findings
+- WP-03: Exploit Development — FreeBSD NFS RCE, Linux kernel chains, Firefox 147, browser JIT, two detailed N-day case studies (CVE-2024-47711 one-bit write, one-byte read to root under HARDENED_USERCOPY)
+- WP-04: Logic & Crypto Vulnerabilities — auth bypasses, TLS/AES-GCM/SSH weaknesses, web app vulns, kernel logic bugs
+- WP-05: Reverse Engineering — closed-source binary analysis, firmware rooting, proprietary browser/OS analysis
+- WP-06: Alignment Assessment — moved from Glasswing event brief; sandbox escape, credential fishing, grader hacking, SAE interpretability, SHADE-Arena, RSP v3.0
+- WP-07: Defender Recommendations — Anthropic's 6 recommendations for security teams + incident response automation
+- WP-08: Strategic Context — 20-year equilibrium disruption, SHA-3/post-quantum parallels, no plateau expected
+- Created workpaper template at `templates/system-card-workpaper.md`
+- Slimmed Glasswing event brief — moved alignment assessment and detailed vulnerability findings to workpapers; event brief now focuses on event context + governance impact with links to workpapers
+- Updated `analysis/harness-governance-gap.md` to reference alignment workpaper (WP-06) instead of event brief
+- Updated all 5 framework trackers (SOC 2, ISO 42001, NIST AI RMF, HIPAA, HITRUST) with workpaper cross-references
+- Updated README with new System Card Workpapers section in Contents
+- Updated SOURCES.md cited-in lines for GLASSWING-CARD and GLASSWING-CARD-PDF
+
+---
+
 ## 2026-04-08 — System card deep integration (244-page PDF)
 
 - Integrated full alignment assessment from Mythos system card PDF (Sections 4.1–4.5)

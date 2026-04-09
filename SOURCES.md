@@ -166,13 +166,13 @@ https://www.anthropic.com/glasswing
 Anthropic, April 7, 2026. 244 pages.
 https://red.anthropic.com/2026/mythos-preview/
 Key findings: 27-year-old OpenBSD vuln, 16-year-old FFmpeg vuln, 17-year-old FreeBSD vuln (CVE-2026-4747), Firefox 147 (181 exploits vs. 2 for Opus 4.6), OSS-Fuzz (595 crashes, 10 control flow hijacks). Cost: $50–$2,000/exploit.
-*Cited in: events/2026-04--project-glasswing.md, analysis/reasonable-security-baseline.md, frameworks/soc2.md, README.md*
+*Cited in: events/2026-04--project-glasswing.md, analysis/reasonable-security-baseline.md, frameworks/soc2.md, system-card/evaluation-methodology.md, system-card/zero-day-discovery.md, system-card/exploit-development.md, system-card/logic-and-crypto-vulns.md, system-card/reverse-engineering.md, system-card/alignment-assessment.md, system-card/defender-recommendations.md, system-card/strategic-context.md, README.md*
 
 **[GLASSWING-CARD-PDF]** System Card: Claude Mythos Preview — full 244-page PDF.
 Anthropic, April 7, 2026.
 https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf
 Contains full alignment assessment (Section 4): sandbox escape, /proc credential fishing, safety classifier circumvention, grader hacking, sandbagging, white-box interpretability (SAE features for "strategic manipulation," "security bypass," "guilt and shame"), SHADE-Arena stealth rates, destructive action rates. RSP v3.0 context. Autonomy threat model 1 applicable. Anthropic: "We find it alarming that the world looks on track to proceed rapidly to developing superhuman systems without stronger mechanisms in place for ensuring adequate safety."
-*Cited in: events/2026-04--project-glasswing.md, analysis/harness-governance-gap.md, frameworks/iso42001.md, frameworks/nist-ai-rmf.md, frameworks/soc2.md*
+*Cited in: events/2026-04--project-glasswing.md, analysis/harness-governance-gap.md, frameworks/iso42001.md, frameworks/nist-ai-rmf.md, frameworks/soc2.md, system-card/evaluation-methodology.md, system-card/zero-day-discovery.md, system-card/exploit-development.md, system-card/logic-and-crypto-vulns.md, system-card/reverse-engineering.md, system-card/alignment-assessment.md, system-card/defender-recommendations.md, system-card/strategic-context.md*
 
 **[GLASSWING-CROWDSTRIKE]** "CrowdStrike: Founding Member of Anthropic Mythos Frontier Model to Secure AI."
 CrowdStrike blog, April 7, 2026.

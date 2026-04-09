@@ -10,7 +10,7 @@ Living document tracking how AI agent developments affect HITRUST controls [HITR
 
 **Current language:** Requires regular scanning and patching of known vulnerabilities.
 
-**Gap/finding:** Currently satisfied by regular scanning and patching. Post-Glasswing, assessors may need to ask whether the organization has evaluated AI-augmented discovery tools or documented a risk acceptance for not using them. HITRUST updates its control framework regularly, and the next revision will likely reference AI-augmented vulnerability management.
+**Gap/finding:** Currently satisfied by regular scanning and patching. Post-Glasswing, assessors may need to ask whether the organization has evaluated AI-augmented discovery tools or documented a risk acceptance for not using them. HITRUST updates its control framework regularly, and the next revision will likely reference AI-augmented vulnerability management. See [WP-07: Defender Recommendations](../system-card/defender-recommendations.md) for Anthropic's own guidance on AI-augmented scanning as standard practice.
 
 ---
 

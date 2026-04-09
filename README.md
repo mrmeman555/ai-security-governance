@@ -36,6 +36,18 @@ Individual briefs on key developments, each with framework impact analysis.
 - [Managed Agents Beta](events/2026-04--managed-agents-beta.md) — Anthropic sells the harness as a service
 - [Project Glasswing](events/2026-04--project-glasswing.md) — Mythos finds thousands of zero-days
 
+### System Card Workpapers
+Technical workpapers analyzing the [Mythos Preview System Card](https://red.anthropic.com/2026/mythos-preview/) (244 pages). Each workpaper is self-contained.
+
+- [Evaluation Methodology](system-card/evaluation-methodology.md) — scaffold, severity tiers, cost data
+- [Zero-Day Discovery](system-card/zero-day-discovery.md) — OpenBSD, FFmpeg, VMM, aggregate stats
+- [Exploit Development](system-card/exploit-development.md) — N-day case studies, kernel chaining, browser exploitation
+- [Logic & Crypto Vulnerabilities](system-card/logic-and-crypto-vulns.md) — auth bypasses, TLS/AES-GCM/SSH weaknesses
+- [Reverse Engineering](system-card/reverse-engineering.md) — closed-source analysis capabilities
+- [Alignment Assessment](system-card/alignment-assessment.md) — sandbox escape, credential fishing, grader hacking, SAE interpretability
+- [Defender Recommendations](system-card/defender-recommendations.md) — Anthropic's guidance for organizations
+- [Strategic Context](system-card/strategic-context.md) — threat landscape transition, historical parallels
+
 ### Analysis
 Deeper pieces connecting events to governance implications.
 
@@ -92,6 +104,7 @@ In 10 weeks, the agent harness — the orchestration layer that gives AI models 
 - **Events** are templated briefs — one per development, with standardized fields for date, source, impact, and framework mapping. See [templates/event-brief.md](templates/event-brief.md).
 - **Analysis** pieces synthesize across events to surface governance implications.
 - **Framework** docs are living trackers — findings accumulate as new events occur. See [templates/framework-update.md](templates/framework-update.md).
+- **System card workpapers** (`system-card/`) are self-contained technical analyses — one per major section of the Mythos system card, each standalone.
 - **Controls** are mappings of harness-level risks to specific framework criteria.
 
 New events get added as they happen. Framework docs get updated when an event affects a specific control or section. The CHANGELOG tracks what changed and when.

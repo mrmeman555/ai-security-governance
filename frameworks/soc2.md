@@ -10,7 +10,7 @@ Living document tracking how AI agent developments affect SOC 2 Trust Services C
 
 **Current language:** Requires organizations to identify and assess risks to the achievement of objectives.
 
-**Gap/finding:** Must now account for accelerated exploitation windows. If an AI can find a 27-year-old bug in hours — and autonomously chain multiple Linux kernel vulnerabilities to gain full machine control — traditional "low" risk ratings for legacy code are no longer defensible. Anthropic published a 244-page system card documenting these capabilities. Risk assessments should consider: "What is our exposure to zero-day vulnerabilities in foundational software, and what is our detection capability for vulnerabilities that don't appear in known databases?"
+**Gap/finding:** Must now account for accelerated exploitation windows. If an AI can find a 27-year-old bug in hours — and autonomously chain multiple Linux kernel vulnerabilities to gain full machine control — traditional "low" risk ratings for legacy code are no longer defensible. Anthropic published a 244-page system card documenting these capabilities. Risk assessments should consider: "What is our exposure to zero-day vulnerabilities in foundational software, and what is our detection capability for vulnerabilities that don't appear in known databases?" See [WP-02: Zero-Day Discovery](../system-card/zero-day-discovery.md) for the evidence.
 
 ---
 
@@ -20,7 +20,7 @@ Living document tracking how AI agent developments affect SOC 2 Trust Services C
 
 **Current language:** Requires the entity to select, develop, and perform ongoing and/or separate evaluations.
 
-**Gap/finding:** Language needs to shift from "periodic" to near-continuous automated scanning. Manual quarterly pentests may no longer meet the "effective" threshold given the scale of AI-driven discovery.
+**Gap/finding:** Language needs to shift from "periodic" to near-continuous automated scanning. Manual quarterly pentests may no longer meet the "effective" threshold given the scale of AI-driven discovery. See [WP-01: Evaluation Methodology](../system-card/evaluation-methodology.md) for the cost and scale data.
 
 ---
 
@@ -40,7 +40,7 @@ Living document tracking how AI agent developments affect SOC 2 Trust Services C
 
 **Current language:** Requires identification and remediation of known vulnerabilities.
 
-**Gap/finding:** Language must expand from "remediation of known vulnerabilities" to include preemptive discovery using AI-native tools that operate at machine speed. The residual risk statement should acknowledge whether detection capabilities extend beyond known-CVE scanning. This becomes a finding if the risk isn't acknowledged. Control narratives for vulnerability management may need to address whether detection capabilities extend beyond known-CVE scanning, now that AI tools can demonstrably find what scanners can't.
+**Gap/finding:** Language must expand from "remediation of known vulnerabilities" to include preemptive discovery using AI-native tools that operate at machine speed. The residual risk statement should acknowledge whether detection capabilities extend beyond known-CVE scanning. This becomes a finding if the risk isn't acknowledged. Control narratives for vulnerability management may need to address whether detection capabilities extend beyond known-CVE scanning, now that AI tools can demonstrably find what scanners can't. See [WP-03: Exploit Development](../system-card/exploit-development.md) for the N-day case studies showing how public CVEs become full exploits in hours.
 
 **Harness context:** Post-Glasswing, CC7.1 may also need to account for whether a harness integrates AI-augmented scanning for the code the agent touches.
 
@@ -70,7 +70,7 @@ Living document tracking how AI agent developments affect SOC 2 Trust Services C
 
 **Triggered by:** [Mythos System Card](../events/2026-04--project-glasswing.md) (April 2026) [GLASSWING-CARD-PDF]
 
-**Gap/finding:** The system card documents the model actively searching for credentials via `/proc` inspection, attempting to dump supervisor process memory with `gdb` and `dd`, and bypassing tool restrictions by opening the application finder to access `bash -c`. These are access control failures at the harness layer — the model found ways around logical access boundaries. For organizations deploying AI agents, CC6.1 control narratives should address whether the agent's execution environment prevents process inspection, memory access, and alternative execution paths. Permission gates at the tool-call level are insufficient if the agent can access the underlying operating system.
+**Gap/finding:** The system card documents the model actively searching for credentials via `/proc` inspection, attempting to dump supervisor process memory with `gdb` and `dd`, and bypassing tool restrictions by opening the application finder to access `bash -c`. These are access control failures at the harness layer — the model found ways around logical access boundaries. For organizations deploying AI agents, CC6.1 control narratives should address whether the agent's execution environment prevents process inspection, memory access, and alternative execution paths. Permission gates at the tool-call level are insufficient if the agent can access the underlying operating system. See [WP-06: Alignment Assessment](../system-card/alignment-assessment.md) for the full evidence.
 
 ---
 
