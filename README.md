@@ -4,19 +4,19 @@ A collection of reference material on agent harnesses, AI governance gaps, and r
 
 ---
 
-## What happened this week
+## What happened in the last 10 weeks
 
-**March 31 — Claude Code source leak.** A misconfigured npm package exposed 513,000 lines of Anthropic's agent harness source code. Not a breach — a supply chain packaging failure. One missing config line. The leaked architecture revealed the full orchestration layer: ~40 tools, dynamic permission gates, memory consolidation, subagent orchestration, and a hook system for injecting custom governance. DMCA takedowns are in progress, but the architecture is now public knowledge.
+**Late January — OpenClaw goes viral.** An open-source agent harness hit 100K GitHub stars in 2 days, 250K in 60 days — the fastest-growing repo in GitHub history, surpassing React's 10-year record. It proved something important: you can swap in Claude, GPT, Gemini, or a local model and the agent still works. The model is interchangeable. The harness — the orchestration layer that manages tools, permissions, memory, and multi-step execution — is what gives it agency.
 
-**Late January — OpenClaw becomes the fastest-growing GitHub repo in history.** 100K stars in 2 days. 210K stars in 10 days. 250K stars in 60 days — surpassing React's 10-year record. Peak growth: 710 stars/hour. The first popular open-source agent harness proved the harness — not the model — is the product. Swap in Claude, GPT, Gemini, or a local model. The model is interchangeable. The harness is what gives it agency.
+**March 31 — Anthropic accidentally confirms it.** A misconfigured npm package exposed 513,000 lines of Claude Code's source — Anthropic's proprietary agent harness. Not a breach, a supply chain packaging failure. One missing config line. The leaked architecture matched OpenClaw's: same components, same patterns. Tools, permission gates, memory, subagent orchestration, audit logging. The industry could now compare the proprietary harness to the open-source one side by side. Same architecture.
 
-**March 31 — Claw Code hits 50K stars in 2 hours.** After the Claude Code leak, Sigrid Jin published a clean-room rewrite of the harness architecture in Rust and Python — no proprietary code, independently audited. 48K+ stars. One of the fastest accumulation rates GitHub has ever recorded. It proved the architecture is reproducible: same tool system, same permission gates, same orchestration patterns.
+**Hours later — Claw Code hits 50K stars in 2 hours.** Sigrid Jin published a clean-room rewrite of the harness in Rust and Python — no proprietary code, independently audited. It proved the architecture is reproducible. Three different harnesses, three different codebases, one converging pattern. The harness is the product.
 
-**April 1 — Claude Managed Agents enters beta.** Anthropic began selling the harness itself as a managed service — containerized execution, built-in tools, persistent sessions, network access controls. Multi-agent orchestration and persistent memory are in research preview. [Docs](https://platform.claude.com/docs/en/managed-agents/overview)
+**April 1 — Anthropic starts selling the harness as a service.** Claude Managed Agents enters beta — a pre-built, configurable agent harness running in Anthropic's cloud. Containerized execution, built-in tools, persistent sessions, network access controls. The harness is now something you buy. [Docs](https://platform.claude.com/docs/en/managed-agents/overview)
 
-**April 7 — Project Glasswing launches.** Anthropic deployed Claude Mythos Preview to ~50 partner organizations (AWS, Apple, Google, Microsoft, CrowdStrike, Palo Alto Networks, and others) with $100M in usage credits. Mythos has already found thousands of high-severity zero-days — including a 27-year-old bug in OpenBSD and a 16-year-old flaw in FFmpeg that automated tools ran 5 million times without catching. [Announcement](https://www.anthropic.com/glasswing)
+**April 7 — Project Glasswing launches.** Anthropic deployed Claude Mythos Preview to ~50 partner organizations (AWS, Apple, Google, Microsoft, CrowdStrike, Palo Alto Networks) with $100M in usage credits. Mythos found thousands of high-severity zero-days — including a 27-year-old bug in OpenBSD and a 16-year-old flaw in FFmpeg that automated tools ran 5 million times without catching. The model that runs inside the harness just demonstrated it can find what 27 years of human review missed. [Announcement](https://www.anthropic.com/glasswing)
 
-**The thread connecting all of it:** The model is the brain. The harness is the nervous system. The harness is where governance controls need to live — and the frameworks (ISO 42001, NIST AI RMF, SOC 2 TSC) are mostly silent on it. Meanwhile, AI-powered vulnerability discovery just demonstrated that the "reasonable security" baseline has shifted.
+**So where does governance go?** The harness is where permissions, tool access, audit logging, and memory persistence live. The frameworks — ISO 42001, NIST AI RMF, SOC 2 TSC — are mostly silent on it. And now the "reasonable security" baseline has shifted, because AI-powered vulnerability discovery just proved that existing scanning tools have a massive blind spot.
 
 ---
 
