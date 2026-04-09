@@ -17,6 +17,15 @@ On April 7, 2026, Anthropic published a [244-page capabilities assessment](https
 
 Full PDF: [Mythos Preview System Card (244 pages)](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) [GLASSWING-CARD-PDF]
 
+### Deployment governance
+
+Anthropic designed its own governance controls for this deployment — without referencing any external framework. Access is restricted to ~50 vetted organizations. Vulnerability disclosure follows a 90+45 day coordinated process with SHA-3 hash commitments and professional human triagers. Anthropic committed to publishing findings and remediation progress within 90 days. [GLASSWING] [GLASSWING-CARD]
+
+> *"An independent, third-party body — one that can bring together private- and public-sector organizations — might be the ideal home for continued work on these large-scale cybersecurity projects."*
+> — [Anthropic](https://www.anthropic.com/glasswing) [GLASSWING]
+
+No external audit is referenced in the system card or announcement — no SOC 2, ISO 27001, or independent third-party review of the deployment itself. For full details, see [System Card Summary — Deployment & Oversight Controls](system-card-summary.md#7-deployment--oversight-controls). [GLASSWING-CARD]
+
 ---
 
 ## Contents
