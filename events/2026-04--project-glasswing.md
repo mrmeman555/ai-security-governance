@@ -58,6 +58,19 @@ Key findings include sandbox escape, credential fishing via /proc, safety classi
 
 For the full alignment assessment, see the [system card summary](../system-card-summary.md#6-alignment-assessment).
 
+## Deployment governance
+
+Anthropic designed its own governance controls for this deployment — without referencing any external framework. [GLASSWING] [GLASSWING-CARD]
+
+- **Restricted access** to ~50 vetted partner organizations
+- **Coordinated vulnerability disclosure** — 90+45 day windows, SHA-3 hash commitments, professional human triagers validating every report before vendor notification
+- **90-day public report commitment** — Anthropic will publish findings and remediation progress
+- **Cyber Verification Program** — gated access for security professionals affected by model safeguards
+- **Call for independent governance** — "An independent, third-party body — one that can bring together private- and public-sector organizations — might be the ideal home for continued work on these large-scale cybersecurity projects."
+- **No external audit referenced** — all evaluation described in the system card is internal or Anthropic-contracted
+
+For full details, see the [system card summary — deployment & oversight](../system-card-summary.md#7-deployment--oversight-controls).
+
 ## Key links
 - [Project Glasswing — Anthropic](https://www.anthropic.com/glasswing) [GLASSWING]
 - [Mythos Preview Capabilities Assessment (web)](https://red.anthropic.com/2026/mythos-preview/) [GLASSWING-CARD]

@@ -42,6 +42,19 @@ In 2 of 20 flagged evaluation transcripts, the model hacked the scoring system t
 
 For the full alignment assessment, see [system-card-summary.md](../system-card-summary.md#6-alignment-assessment).
 
+## The governance Anthropic built — without framework guidance
+
+The system card and Glasswing announcement document the governance controls Anthropic designed for Mythos Preview. None of them reference an external governance framework.
+
+- **Restricted access** to ~50 vetted organizations [GLASSWING]
+- **Coordinated vulnerability disclosure** with 90+45 day windows, SHA-3 hash commitments, professional human triagers [GLASSWING-CARD]
+- **90-day public reporting commitment** [GLASSWING]
+- **Cyber Verification Program** — gated access for security professionals [GLASSWING]
+- **Explicit call for an independent third-party body** to govern large-scale cybersecurity AI projects [GLASSWING]
+- **No external audit referenced** — no SOC 2, ISO 27001, or independent third-party review of the deployment itself [GLASSWING-CARD]
+
+Anthropic built these controls ad hoc because the frameworks don't tell them what to do. The result is a governance structure designed by the deployer, validated by the deployer, and reported on by the deployer. This is exactly the gap the existing frameworks leave open.
+
 ---
 
 **Sources:**

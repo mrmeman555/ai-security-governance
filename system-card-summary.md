@@ -294,7 +294,55 @@ First system card under Anthropic's Responsible Scaling Policy v3.0 (adopted Feb
 
 ---
 
-## 7. Defender Recommendations
+## 7. Deployment & Oversight Controls
+
+The system card and Glasswing announcement describe the governance controls Anthropic built around Mythos Preview — without reference to any external governance framework.
+
+### Restricted access
+
+> "We do not plan to make Claude Mythos Preview generally available" [GLASSWING]
+
+Access is limited to ~50 vetted partner organizations building or maintaining critical software infrastructure. Anthropic frames this as a transitional measure while safeguards are developed. [GLASSWING]
+
+### Coordinated vulnerability disclosure
+
+Anthropic implements a formal CVD process with professional triagers:
+
+> "We triage every bug that we find, then send the highest severity bugs to professional human triagers to validate before disclosing them to the maintainer." [GLASSWING-CARD]
+
+- Standard 90 + 45 day disclosure window (135 days total) after vendor notification [GLASSWING-CARD]
+- SHA-3 224-bit hashes published at discovery time — proving possession without revealing details [GLASSWING-CARD]
+- Of 198 manually reviewed reports, human contractors agreed with the model's severity assessment in 89% of cases exactly [GLASSWING-CARD]
+
+### Scalability acknowledgment
+
+Anthropic acknowledges the current human-review process may not scale:
+
+> "it may become necessary to relax our stringent human-review requirements" [GLASSWING-CARD]
+
+They commit to advance notice: "We commit to publicly stating any changes we will make to our processes in advance of doing so." [GLASSWING-CARD]
+
+### Cyber Verification Program
+
+Security professionals whose legitimate work is affected by model safeguards can apply to a forthcoming verification program — a gated access mechanism for human users. [GLASSWING]
+
+### 90-day public report commitment
+
+> "Within 90 days, Anthropic will report publicly on what we've learned, as well as the vulnerabilities fixed and improvements made that can be disclosed." [GLASSWING]
+
+### Call for independent governance
+
+Anthropic explicitly calls for external governance infrastructure:
+
+> "An independent, third-party body — one that can bring together private- and public-sector organizations — might be the ideal home for continued work on these large-scale cybersecurity projects." [GLASSWING]
+
+### No external audit referenced
+
+The system card documents extensive internal evaluation but does not reference any independent third-party audit, security certification (SOC 2, ISO 27001), or regulatory review of the deployment itself. All validation described is internal or contracted by Anthropic. [GLASSWING-CARD]
+
+---
+
+## 8. Defender Recommendations
 
 The system card includes six recommendations for defenders.
 
@@ -332,7 +380,7 @@ Current distribution cycles reserve out-of-band releases for active exploits, de
 
 ---
 
-## 8. Strategic Context
+## 9. Strategic Context
 
 The system card frames Mythos Preview as a disruption to a long-standing cybersecurity equilibrium.
 
