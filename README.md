@@ -48,11 +48,13 @@ No details have been published — eligibility criteria, application process, ac
 
 ## What this research tracks
 
-Two governance questions emerged from these events:
+Three governance questions emerged from these events:
 
 1. **The harness gap.** Between January and April 2026, three independent codebases — OpenClaw [OPENCLAW], Claw Code [CLAW-CODE], and the leaked Claude Code source [CLAUDE-LEAK-TECHCRUNCH] — converged on the same agent harness architecture: tools, permission gates, memory, subagent orchestration, audit logging. [CLAUDE-LEAK-ANALYSIS] The major governance frameworks — ISO 42001 [ISO-42001], NIST AI RMF [NIST-AI-RMF], SOC 2 [SOC2-TSC] — do not address this orchestration layer. See [The Harness Governance Gap](analysis/harness-governance-gap.md).
 
 2. **The baseline shift.** In *FTC v. Wyndham* (3d Cir. 2015), the Third Circuit held that "reasonable security" under FTC Section 5 is benchmarked against available technology using a cost-benefit framework. [FTC-WYNDHAM] The Mythos Preview system card documents AI-driven exploit development at $50–$2,000 per exploit. [GLASSWING-CARD] See [The Reasonable Security Baseline Just Moved](analysis/reasonable-security-baseline.md).
+
+3. **The capability threshold.** The Mythos Preview sandbox escape — where the model autonomously built a multi-step exploit and emailed a researcher without direction — is not harness behavior. A harness does not make strategic decisions. The governance question is what it means that the model itself crossed a reasoning threshold where the harness acts as a force multiplier for already-dangerous capability, not the source of it.
 
 ---
 
