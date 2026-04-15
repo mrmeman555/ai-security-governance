@@ -1,7 +1,7 @@
 # Event: SANS, CSA, and OWASP Release Emergency Mythos-Ready Security Briefing
 
 ## Date
-2026-04-14
+2026-04-13 (PDF live); 2026-04-14 (formal press release)
 
 ## Source
 - [MYTHOS-BRIEFING] [GlobeNewswire press release](https://www.globenewswire.com/news-release/2026/04/14/3273499/0/en/SANS-Institute-Cloud-Security-Alliance-un-prompted-and-OWASP-GenAI-Security-Project-Release-Emergency-Strategy-Briefing-as-AI-Driven-Vulnerability-Discovery-Compresses-Exploit-Time.html)
@@ -9,7 +9,7 @@
 
 ## What happened
 
-SANS Institute, the Cloud Security Alliance, [un]prompted, and the OWASP GenAI Security Project jointly released *"The AI Vulnerability Storm: Building a Mythos-Ready Security Program"* — a free 30-page strategy briefing produced over a single weekend by more than 60 named contributors and reviewed by over 250 CISOs. It is the first multi-organization practitioner document to respond directly to the capabilities demonstrated by [Project Glasswing](2026-04--project-glasswing.md) and to translate those capabilities into an actionable framework for CISOs and boards.
+SANS Institute, the Cloud Security Alliance, [un]prompted, and the OWASP GenAI Security Project jointly released *"The AI Vulnerability Storm: Building a Mythos-Ready Security Program"* — a free 30-page strategy briefing produced over a single weekend by more than 60 named contributors and reviewed by over 250 CISOs. The PDF was published as a live draft on April 13; the coordinated press release followed April 14. It is the first multi-organization practitioner document to respond directly to the capabilities demonstrated by [Project Glasswing](2026-04--project-glasswing.md) and to translate those capabilities into an actionable framework for CISOs and boards.
 
 The contributors include Jen Easterly (former CISA Director), Chris Inglis (former National Cyber Director), Phil Venables (Google CISO), Bruce Schneier, Heather Adkins, Rob Joyce, and Sounil Yu, among others. The breadth of the author list signals this document is intended to carry policy weight, not just practitioner guidance.
 
