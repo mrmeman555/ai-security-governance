@@ -4,8 +4,8 @@
 
 | Date | Latest |
 |------|--------|
-| Apr 13, 2026 | [SANS/CSA/OWASP Mythos-Ready Briefing](events/2026-04--sans-csa-owasp-mythos-briefing.md) — 60+ practitioners including former CISA Director respond to Glasswing; explicitly shifts "reasonable defensive effort" standard [MYTHOS-BRIEFING] |
-| Apr 7, 2026 | [Project Glasswing](events/2026-04--project-glasswing.md) — Anthropic deploys Mythos to ~50 orgs; 244-page system card documents thousands of zero-days, $50–$2,000/exploit, grader hacking [GLASSWING] |
+| Apr 22, 2026 | [Mythos Preview third-party vendor breach](events/2026-04--mythos-third-party-breach.md) — unauthorized access confirmed within 14 days of Glasswing launch; directly tests the unilateral governance premise [MYTHOS-BREACH] |
+| Apr 14, 2026 | [UK AISI independent Mythos evaluation](events/2026-04--aisi-mythos-evaluation.md) — first government body confirms autonomous multi-stage enterprise attack capability; benchmark saturation warning [AISI-MYTHOS] |
 
 Ongoing research tracking how AI agent developments affect cybersecurity governance — centered on [Project Glasswing](events/2026-04--project-glasswing.md), the practitioner response it triggered, the agent harness ecosystem, and what all three mean for the "reasonable security" standard.
 
@@ -147,6 +147,8 @@ For full details, see [System Card Summary — Alignment Assessment](system-card
 - [Managed Agents Beta](events/2026-04--managed-agents-beta.md) — Anthropic launches the harness as a managed service [MANAGED-AGENTS]
 - [Project Glasswing](events/2026-04--project-glasswing.md) — Anthropic deploys Claude Mythos to ~50 organizations; system card documents thousands of zero-days [GLASSWING]
 - [SANS/CSA/OWASP Mythos-Ready Briefing](events/2026-04--sans-csa-owasp-mythos-briefing.md) — 60+ practitioners including former CISA Director and National Cyber Director release emergency strategy briefing in direct response to Glasswing; explicitly states that Mythos shifts the "reasonable defensive effort" standard [MYTHOS-BRIEFING]
+- [UK AISI Mythos Evaluation](events/2026-04--aisi-mythos-evaluation.md) — first independent government body confirms Mythos completes 32-step enterprise attack autonomously; benchmark saturation warning; evaluation was advisory not gatekeeping [AISI-MYTHOS]
+- [Mythos Preview Third-Party Vendor Breach](events/2026-04--mythos-third-party-breach.md) — unauthorized access via contractor OAuth + URL enumeration within 14 days of Glasswing launch; directly tests unilateral governance premise [MYTHOS-BREACH]
 
 ### Analysis
 

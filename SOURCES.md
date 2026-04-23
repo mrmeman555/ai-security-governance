@@ -344,4 +344,20 @@ The following sources are referenced in artifacts but lack verified URLs. Enough
 
 ---
 
+**[AISI-MYTHOS]** UK AI Security Institute — independent evaluation of Claude Mythos Preview cyber capabilities.
+Published April 14, 2026. First model to complete 32-step enterprise attack autonomously (3/10 attempts); 73% success on expert CTFs; performance not plateaued at 100M token budget.
+Primary: https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities
+*Cited in: events/2026-04--aisi-mythos-evaluation.md*
+
+**[MYTHOS-BREACH]** Unauthorized access to Claude Mythos Preview via third-party vendor environment.
+Reported April 21; Anthropic confirms investigation April 22, 2026.
+TechCrunch: https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/
+Euronews: https://www.euronews.com/next/2026/04/22/hackers-breach-anthropics-too-dangerous-to-release-mythos-ai-model-report
+CBS News: https://www.cbsnews.com/news/anthropic-investigates-mythos-ai-breach/
+Bloomberg: https://www.bloomberg.com/news/videos/2026-04-22/mythos-breach-shows-need-for-ai-framework-magaziner-video
+CybersecurityNews: https://cybersecuritynews.com/anthropic-mythos-access/
+*Cited in: events/2026-04--mythos-third-party-breach.md*
+
+---
+
 *This bibliography is maintained alongside the artifacts it supports. When a new event or finding is added, its sources are registered here.*

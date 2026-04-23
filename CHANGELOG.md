@@ -4,6 +4,15 @@ All notable updates to this repository.
 
 ---
 
+## 2026-04-22 — Two new events: UK AISI evaluation and Mythos breach
+
+- Added `events/2026-04--aisi-mythos-evaluation.md` — UK AISI independent evaluation of Mythos Preview published April 14. First government body to confirm autonomous multi-stage enterprise attack capability (32-step network attack, 3/10 attempts). Benchmark saturation warning: performance not plateaued at 100M token budget. Evaluation was advisory, not gatekeeping — deployment preceded independent review. [AISI-MYTHOS]
+- Added `events/2026-04--mythos-third-party-breach.md` — Anthropic confirms April 22 it is investigating unauthorized access to Mythos Preview via a third-party vendor environment. Breach reportedly dates from the April 7 launch week. Access method: contractor OAuth + URL enumeration. Directly tests the unilateral governance premise of Glasswing — no independent third-party body audited the access controls that failed. [MYTHOS-BREACH]
+- Updated `SOURCES.md` — registered AISI-MYTHOS and MYTHOS-BREACH citation keys
+- Updated `README.md` — latest strip and events list
+
+---
+
 ## 2026-04-14 — New event: SANS/CSA/OWASP Mythos-Ready Security Briefing
 
 - Added `events/2026-04--sans-csa-owasp-mythos-briefing.md` — event brief for the emergency strategy briefing released today by SANS Institute, Cloud Security Alliance, [un]prompted, and the OWASP GenAI Security Project. Co-authored by former CISA Director Jen Easterly, former National Cyber Director Chris Inglis, Google CISO Phil Venables, and 60+ others; reviewed by 250+ CISOs. Direct link to 30-page PDF at `https://labs.cloudsecurityalliance.org/mythos-ciso/`.
